@@ -1,6 +1,14 @@
 # Simple-Shader-Setup
 Threejs shader boilerplate
 
+Package Installs
+```
+npm create vite@latest ./ (Choose Vanilla)
+npm i three
+npm i vite-plugin-glsl --force
+
+```
+
 index.html
 ```
 <!doctype html>
@@ -132,3 +140,12 @@ void main() {
 }
 ```
 
+vite.config.js
+```
+import glsl from 'vite-plugin-glsl'
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+    plugins: [glsl()],
+})
+```
